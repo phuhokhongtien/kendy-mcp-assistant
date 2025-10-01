@@ -1,7 +1,3 @@
-# CI/CD Pipeline Configuration
-# This is a placeholder for the CI/CD workflow
-# Configure this file once the project structure is finalized
-
 name: CI/CD Pipeline
 
 on:
@@ -11,56 +7,122 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  # Placeholder for build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      
-      # TODO: Add build steps
-      # - name: Install dependencies
-      #   run: npm install
-      # 
-      # - name: Build
-      #   run: npm run build
-
-  # Placeholder for test job
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      
-      # TODO: Add test steps
-      # - name: Install dependencies
-      #   run: npm install
-      # 
-      # - name: Run tests
-      #   run: npm test
-
-  # Placeholder for lint job
   lint:
+    name: Lint Code
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
-      # TODO: Add lint steps
-      # - name: Install dependencies
-      #   run: npm install
-      # 
-      # - name: Run linter
-      #   run: npm run lint
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run ESLint
+        run: npm run lint
+      
+      - name: Check code formatting
+        run: npm run format:check
 
-  # Placeholder for deploy job
+  type-check:
+    name: Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run TypeScript type checker
+        run: npm run type-check
+
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 7
+
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    needs: [lint, type-check]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run tests
+        run: npm test
+      
+      - name: Run tests with coverage
+        run: npm run test:coverage
+      
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v4
+        if: success()
+        with:
+          file: ./coverage/lcov.info
+          fail_ci_if_error: false
+
+  # Placeholder for future deployment job
   # deploy:
+  #   name: Deploy Application
   #   runs-on: ubuntu-latest
-  #   needs: [build, test, lint]
-  #   if: github.ref == 'refs/heads/main'
+  #   needs: [build, test]
+  #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
   #   steps:
   #     - name: Checkout code
-  #       uses: actions/checkout@v3
+  #       uses: actions/checkout@v4
   #     
-  #     # TODO: Add deployment steps
+  #     - name: Download build artifacts
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: dist
+  #         path: dist/
+  #     
+  #     # TODO: Add deployment steps based on hosting platform
+  #     # Examples:
+  #     # - Deploy to AWS
+  #     # - Deploy to Azure
+  #     # - Deploy to Google Cloud
+  #     # - Deploy to Docker registry

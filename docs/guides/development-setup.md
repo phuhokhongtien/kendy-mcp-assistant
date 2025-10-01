@@ -6,10 +6,30 @@ This guide will help you set up your development environment for Kendy MCP Assis
 
 Before you begin, ensure you have the following installed:
 
+### Required Tools
+
 - **Node.js** (v18 or higher)
 - **npm** (v9 or higher)
 - **Git** for version control
 - A code editor (VS Code recommended)
+
+### Optional Tools (for advanced development)
+
+- **Docker** (v20+ recommended) - For containerized development and deployment
+- **Docker Compose** (v2+) - For multi-container orchestration
+- **React Native CLI** - If working on mobile components in the future
+- **TypeScript** (global installation) - For CLI tools and type checking
+
+### VS Code Extensions (Recommended)
+
+If using VS Code, install these extensions for better development experience:
+
+- **ESLint** - JavaScript and TypeScript linting
+- **Prettier** - Code formatting
+- **TypeScript and JavaScript Language Features** (built-in)
+- **Jest** - Test running and debugging
+- **GitLens** - Enhanced Git capabilities
+- **Docker** - Docker container management
 
 ## Initial Setup
 
