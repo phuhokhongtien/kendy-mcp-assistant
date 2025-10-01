@@ -35,6 +35,7 @@ Run scripts from the project root directory:
 ## Creating New Scripts
 
 When adding a new script:
+
 1. Add a clear description at the top
 2. Document required parameters
 3. Include usage examples

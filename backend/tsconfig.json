@@ -4,11 +4,6 @@
     "rootDir": "./",
     "outDir": "../dist/backend"
   },
-  "include": [
-    "./**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "tests"
-  ]
+  "include": ["./**/*"],
+  "exclude": ["node_modules", "tests"]
 }

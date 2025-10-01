@@ -16,24 +16,28 @@ docs/
 ## Documentation Types
 
 ### Architecture Documentation
+
 - System design and architecture decisions
 - Component diagrams
 - Data flow diagrams
 - Technology stack overview
 
 ### API Documentation
+
 - API endpoints and methods
 - Request/response examples
 - Authentication requirements
 - Error codes and handling
 
 ### User Guides
+
 - Installation and setup
 - Feature usage instructions
 - Troubleshooting guides
 - FAQ
 
 ### Developer Guides
+
 - Development environment setup
 - Coding standards and conventions
 - Testing guidelines

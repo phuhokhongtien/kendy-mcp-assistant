@@ -15,7 +15,7 @@ This directory contains API documentation for the Kendy MCP Assistant.
 
 Use the following structure for API endpoints:
 
-```markdown
+````markdown
 ## [METHOD] /endpoint/path
 
 Description of what this endpoint does.
@@ -23,19 +23,23 @@ Description of what this endpoint does.
 ### Request
 
 **Headers:**
+
 - Authorization: Bearer {token}
 - Content-Type: application/json
 
 **Body:**
+
 ```json
 {
   "field": "value"
 }
 ```
+````
 
 ### Response
 
 **Success (200 OK):**
+
 ```json
 {
   "status": "success",
@@ -44,14 +48,17 @@ Description of what this endpoint does.
 ```
 
 **Error (4xx/5xx):**
+
 ```json
 {
   "status": "error",
   "message": "Error description"
 }
 ```
+
 ```
 
 ## Tools
 
 Consider using tools like Swagger/OpenAPI for automated API documentation.
+```

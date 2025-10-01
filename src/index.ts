@@ -3,7 +3,9 @@
  * Main entry point for the application
  */
 
+// eslint-disable-next-line no-console
 console.log('Kendy MCP Assistant v0.1.0');
+// eslint-disable-next-line no-console
 console.log('Initializing...');
 
 // TODO: Add application initialization logic here
