@@ -82,7 +82,23 @@ npm start
 yarn start
 ```
 
-### Development
+### Backend Development
+
+To start the backend server with Docker (recommended):
+
+```bash
+# Setup Docker environment (first time only)
+npm run docker:setup
+
+# Start backend server
+npm run dev:backend
+```
+
+The backend API will be available at http://localhost:3000/api/v1
+
+For detailed backend setup instructions, see [docs/backend-setup.md](docs/backend-setup.md).
+
+### Frontend Development
 
 To start the development server with hot-reload:
 
@@ -137,6 +153,7 @@ For complete mobile setup instructions, see [mobile/README.md](mobile/README.md)
 Comprehensive documentation is available in the `/docs` directory:
 
 - **Architecture Guide**: System design and architecture decisions
+- **Backend Setup**: [docs/backend-setup.md](docs/backend-setup.md) - Backend infrastructure and API setup
 - **API Reference**: Detailed API documentation
 - **User Guide**: End-user documentation and tutorials
 - **Developer Guide**: Development setup and best practices
@@ -151,6 +168,9 @@ Comprehensive documentation is available in the `/docs` directory:
 - [x] Development environment configuration
 - [x] Build and test tooling
 - [x] React Native mobile app bootstrap
+- [x] Backend services & database setup (Express, PostgreSQL, Redis)
+- [x] Docker support for local development
+- [x] Health check API endpoint
 - [ ] Core MCP integration
 - [ ] Basic UI components
 
