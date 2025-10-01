@@ -4,6 +4,6 @@
     "rootDir": "./",
     "outDir": "../dist/backend"
   },
-  "include": ["./**/*"],
-  "exclude": ["node_modules", "tests"]
+  "include": ["./**/*", "../prisma/**/*"],
+  "exclude": ["node_modules"]
 }
