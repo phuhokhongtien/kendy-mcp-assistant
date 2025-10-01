@@ -37,11 +37,13 @@ kendy-mcp-assistant/
 Before you begin, ensure you have the following installed:
 
 #### Required
+
 - **Node.js** (v18 or higher)
 - **npm** (v9 or higher) or **yarn** package manager
 - **Git** for version control
 
 #### Optional (for advanced development)
+
 - **Docker** (for containerized development and deployment)
 - **React Native CLI** (if working on mobile components)
 - **TypeScript** (globally installed for CLI tools)
