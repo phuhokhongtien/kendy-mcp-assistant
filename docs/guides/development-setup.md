@@ -107,6 +107,45 @@ npm run type-check    # Run TypeScript type checking
 npm run clean         # Remove build artifacts
 ```
 
+### Mobile App Development
+
+The project includes a React Native mobile application in the `mobile/` directory.
+
+#### Setup
+
+```bash
+cd mobile
+npm install
+
+# For iOS (macOS only)
+cd ios && pod install && cd ..
+
+# For Android, ensure you have Android Studio and SDK installed
+```
+
+#### Running Mobile App
+
+```bash
+cd mobile
+
+# Start Metro bundler
+npm start
+
+# In separate terminals:
+npm run ios      # Run on iOS simulator (macOS only)
+npm run android  # Run on Android emulator or device
+```
+
+#### Mobile App Scripts
+
+```bash
+cd mobile
+npm run lint     # Lint mobile code
+npm test         # Run mobile tests
+```
+
+For complete mobile development instructions, see [mobile/README.md](../../mobile/README.md).
+
 ## Project Structure
 
 ```
@@ -129,6 +168,20 @@ kendy-mcp-assistant/
 │   ├── utils/              # Backend utilities
 │   ├── tests/              # Backend tests
 │   └── server.ts           # Server entry point
+├── mobile/                 # React Native mobile app
+│   ├── src/                # Mobile app source code
+│   │   ├── components/     # Mobile UI components
+│   │   ├── screens/        # Screen components
+│   │   ├── navigation/     # Navigation setup
+│   │   ├── services/       # Mobile services
+│   │   ├── hooks/          # Custom hooks
+│   │   ├── contexts/       # Context providers
+│   │   ├── utils/          # Utility functions
+│   │   ├── types/          # Type definitions
+│   │   └── locales/        # i18n translations
+│   ├── android/            # Android native code
+│   ├── ios/                # iOS native code
+│   └── __tests__/          # Mobile tests
 ├── docs/                   # Documentation
 │   ├── architecture/       # Architecture docs
 │   ├── api/                # API documentation

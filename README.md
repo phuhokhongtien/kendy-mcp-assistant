@@ -20,6 +20,7 @@ Kendy MCP Assistant is a powerful tool that leverages the Model Context Protocol
 kendy-mcp-assistant/
 ├── src/                    # Source code
 ├── backend/                # Backend services and APIs
+├── mobile/                 # React Native mobile application
 ├── docs/                   # Documentation
 ├── scripts/                # Utility scripts
 ├── .github/                # GitHub workflows and configurations
@@ -111,6 +112,26 @@ npm test
 yarn test
 ```
 
+## 📱 Mobile Application
+
+The Kendy MCP Assistant includes a React Native mobile application for iOS and Android.
+
+### Getting Started with Mobile
+
+```bash
+cd mobile
+npm install
+
+# For iOS (macOS only)
+cd ios && pod install && cd ..
+npm run ios
+
+# For Android
+npm run android
+```
+
+For complete mobile setup instructions, see [mobile/README.md](mobile/README.md).
+
 ## 📖 Documentation
 
 Comprehensive documentation is available in the `/docs` directory:
@@ -119,6 +140,7 @@ Comprehensive documentation is available in the `/docs` directory:
 - **API Reference**: Detailed API documentation
 - **User Guide**: End-user documentation and tutorials
 - **Developer Guide**: Development setup and best practices
+- **Mobile App Guide**: [mobile/README.md](mobile/README.md)
 
 ## 🗺️ Roadmap
 
@@ -128,6 +150,7 @@ Comprehensive documentation is available in the `/docs` directory:
 - [x] Basic documentation
 - [x] Development environment configuration
 - [x] Build and test tooling
+- [x] React Native mobile app bootstrap
 - [ ] Core MCP integration
 - [ ] Basic UI components
 
@@ -143,7 +166,7 @@ Comprehensive documentation is available in the `/docs` directory:
 - [ ] Real-time communication
 - [ ] Advanced analytics and reporting
 - [ ] Plugin system
-- [ ] Mobile application support
+- [ ] Mobile application enhancements
 
 ### Phase 4: Production Ready
 
