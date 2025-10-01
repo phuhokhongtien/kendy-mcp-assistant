@@ -87,6 +87,7 @@ There are many ways to contribute to Kendy MCP Assistant:
 ### Branch Naming Convention
 
 Use descriptive branch names:
+
 - `feature/description` - for new features
 - `fix/description` - for bug fixes
 - `docs/description` - for documentation changes
@@ -222,6 +223,7 @@ Add null checks before accessing user properties.
 ### PR Title Format
 
 Use the same format as commit messages:
+
 ```
 feat: add new authentication feature
 fix: resolve memory leak in data processing
