@@ -5,6 +5,40 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+#### Mobile Application
+
+- React Native mobile app bootstrap in `mobile/` directory
+- TypeScript configuration for React Native
+- Folder structure: components, services, screens, utils, types, contexts, hooks, navigation, locales
+- Installed dependencies:
+  - `@react-native-voice/voice` - Voice recognition
+  - `react-native-tts` - Text-to-speech
+  - `@react-native-async-storage/async-storage` - Local storage
+  - `@react-navigation/native` & `@react-navigation/stack` - Navigation
+  - `@react-native-community/netinfo` - Network information
+  - `react-native-keychain` - Secure storage
+  - `i18next` & `react-i18next` - Internationalization
+- Metro bundler configuration
+- VS Code debug configurations for iOS and Android
+- Placeholder screens: Home and Settings
+- React Navigation with stack navigator
+- Vietnamese (default) and English language support
+- Comprehensive mobile app README.md with setup instructions
+- Jest testing setup with mocks for native modules
+- ESLint and Prettier configuration for mobile
+- Android app structure with Gradle configuration
+- iOS app preparation (requires macOS for full setup)
+
+### Changed
+
+- Updated main README.md to include mobile app section
+- Updated development-setup.md guide with mobile development instructions
+- Added `mobile/` directory to root ESLint and Prettier ignore patterns
+
 ## [0.1.0] - 2024-10-01
 
 ### Added

@@ -40,5 +40,5 @@
     "prefer-const": "error",
     "no-var": "error"
   },
-  "ignorePatterns": ["dist", "node_modules", "coverage", "*.config.js", "*.config.ts"]
+  "ignorePatterns": ["dist", "node_modules", "coverage", "*.config.js", "*.config.ts", "mobile"]
 }

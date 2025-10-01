@@ -24,6 +24,9 @@ coverage/
 .vscode/
 .idea/
 
+# Mobile app
+mobile/
+
 # Misc
 *.min.js
 *.min.css
