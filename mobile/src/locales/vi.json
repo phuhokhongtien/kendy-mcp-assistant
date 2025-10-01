@@ -1,0 +1,22 @@
+{
+  "common": {
+    "appName": "Kendy MCP Assistant",
+    "welcome": "Chào mừng",
+    "settings": "Cài đặt",
+    "back": "Quay lại",
+    "save": "Lưu",
+    "cancel": "Hủy"
+  },
+  "home": {
+    "title": "Trang chủ",
+    "description": "Trợ lý MCP thông minh của bạn",
+    "getStarted": "Bắt đầu"
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "language": "Ngôn ngữ",
+    "theme": "Giao diện",
+    "notifications": "Thông báo",
+    "about": "Giới thiệu"
+  }
+}

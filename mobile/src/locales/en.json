@@ -1,0 +1,22 @@
+{
+  "common": {
+    "appName": "Kendy MCP Assistant",
+    "welcome": "Welcome",
+    "settings": "Settings",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "home": {
+    "title": "Home",
+    "description": "Your intelligent MCP assistant",
+    "getStarted": "Get Started"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "about": "About"
+  }
+}
