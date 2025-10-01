@@ -19,7 +19,7 @@ const HomeScreen: React.FC = () => {
       <View style={styles.content}>
         <Text style={styles.title}>{t('common.welcome')}</Text>
         <Text style={styles.subtitle}>{t('home.description')}</Text>
-        
+
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('Settings')}>
